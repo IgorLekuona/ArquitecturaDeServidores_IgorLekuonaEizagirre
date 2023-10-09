@@ -1,9 +1,7 @@
 const Users = require("../models/user.model");
 
 module.exports.create = (req, res) => {
-    // console.log(req.body);
     let result = Users.addEmployee(req.body);
-    // console.log(result);
     if (Array.isArray(result)) {
         res.json(result);
     } else {

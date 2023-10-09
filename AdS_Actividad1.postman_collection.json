@@ -12,14 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees",
-					"protocol": "http",
+					"raw": "{{url}}/employees",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					]
 				}
@@ -32,14 +29,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees?page=1",
-					"protocol": "http",
+					"raw": "{{url}}/employees?page=1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					],
 					"query": [
@@ -58,14 +52,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees?page=2",
-					"protocol": "http",
+					"raw": "{{url}}/employees?page=2",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					],
 					"query": [
@@ -84,20 +75,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees?page=N",
-					"protocol": "http",
+					"raw": "{{url}}/employees?page=5",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					],
 					"query": [
 						{
 							"key": "page",
-							"value": "N"
+							"value": "5"
 						}
 					]
 				}
@@ -110,14 +98,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees?user=true",
-					"protocol": "http",
+					"raw": "{{url}}/employees?user=true",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					],
 					"query": [
@@ -136,14 +121,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees?badges=black",
-					"protocol": "http",
+					"raw": "{{url}}/employees?badges=black",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					],
 					"query": [
@@ -162,14 +144,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees/name",
-					"protocol": "http",
+					"raw": "{{url}}/employees/name",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees",
 						"name"
 					]
@@ -183,14 +162,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/employees/oldest",
-					"protocol": "http",
+					"raw": "{{url}}/employees/oldest",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees",
 						"oldest"
 					]
@@ -213,14 +189,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/employees",
-					"protocol": "http",
+					"raw": "{{url}}/employees",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					]
 				}
@@ -237,19 +210,43 @@
 					"raw": "{\"employee\": {\r\n    \"nombre\": \"Igor\",\r\n    \"age\": 26,\r\n    \"phone\": {\r\n      \"personal\": \"555-555-555\",\r\n      \"work\": \"555-666-777\",\r\n      \"ext\": \"2314\"\r\n    },\r\n    \"privileges\": \"user\",\r\n    \"favorites\": {\r\n      \"artist\": \"Mora\",\r\n      \"food\": \"pasta\"\r\n    },\r\n    \"finished\": [\r\n      17,\r\n      3\r\n    ],\r\n    \"badges\": [\r\n      \"red\",\r\n      \"green\"\r\n    ],\r\n    \"points\": [\r\n      {\r\n        \"points\": 85,\r\n        \"bonus\": 20\r\n      },\r\n      {\r\n        \"points\": 85,\r\n        \"bonus\": 10\r\n      }\r\n    ]\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/employees",
-					"protocol": "http",
+					"raw": "{{url}}/employees",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"employees"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api",
+			"type": "string"
 		}
 	]
 }
