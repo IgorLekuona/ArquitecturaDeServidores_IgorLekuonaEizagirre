@@ -7,128 +7,240 @@
 	},
 	"item": [
 		{
-			"name": "get posts",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/posts",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"posts"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get posts :id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/posts/:id",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"posts",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "652414dfd502550fdfd48918"
+			"name": "Posts",
+			"item": [
+				{
+					"name": "get posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTI3YmUwNjk0NWIxMDQ5N2NiNWMzNzAiLCJleHAiOjE2OTcxMDgwNzcuNDMzLCJpYXQiOjE2OTcxMDQ0Nzd9.bmzPkXkRa1CPyhRNLcRrUEtlaxcsqSbnfO_0boxYC_Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "post posts",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\" : \"random post 3\",\r\n    \"text\" : \"Lorem ipsum noseque nosecuantos\",\r\n    \"author\" : \"Igor\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{url}}/posts",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"posts"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "patch posts :id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"author\": \"Mario\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "get posts :id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTI3YmUwNjk0NWIxMDQ5N2NiNWMzNzAiLCJleHAiOjE2OTcxMDY5NzAuMDIsImlhdCI6MTY5NzEwMzM3MH0.0_g5zdt4XhgJGUFZY0l6wpLJY56IrWxDQNwIx6Cm0ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6527be48945b10497cb5c374"
+								}
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{url}}/posts/:id",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"posts",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "652414dcd502550fdfd48916"
+				{
+					"name": "post posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTI3YmUwNjk0NWIxMDQ5N2NiNWMzNzAiLCJleHAiOjE2OTcxMDY5NzAuMDIsImlhdCI6MTY5NzEwMzM3MH0.0_g5zdt4XhgJGUFZY0l6wpLJY56IrWxDQNwIx6Cm0ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"random post 3\",\r\n    \"text\" : \"Lorem ipsum noseque nosecuantos\",\r\n    \"author\" : \"Igor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "patch posts :id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTI3YmUwNjk0NWIxMDQ5N2NiNWMzNzAiLCJleHAiOjE2OTcxMDY5NzAuMDIsImlhdCI6MTY5NzEwMzM3MH0.0_g5zdt4XhgJGUFZY0l6wpLJY56IrWxDQNwIx6Cm0ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"Mario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6527be4c945b10497cb5c376"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete posts :id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTI3YmUwNjk0NWIxMDQ5N2NiNWMzNzAiLCJleHAiOjE2OTcxMDY5NzAuMDIsImlhdCI6MTY5NzEwMzM3MH0.0_g5zdt4XhgJGUFZY0l6wpLJY56IrWxDQNwIx6Cm0ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6527be4c945b10497cb5c376"
+								}
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "delete posts :id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/posts/:id",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"posts",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "652414dfd502550fdfd48918"
+			"name": "Users",
+			"item": [
+				{
+					"name": "post users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Igor\",\r\n    \"email\" : \"igor@igor.com\",\r\n    \"password\" : \"12345\",\r\n    \"bio\": \"Lorem Ipsum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "post login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"igor@igor.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"event": [
