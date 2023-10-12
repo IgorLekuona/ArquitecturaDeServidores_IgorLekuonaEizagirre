@@ -1,7 +1,6 @@
 const Post = require("../models/post.model");
 
 module.exports.create = (req, res) => {
-    // res.json({message : "create"});
     Post.create(req.body)
         .then((post) => {
             res.status(201).json(post);
@@ -42,7 +41,7 @@ module.exports.delete = (req, res) => {
     Post.findByIdAndDelete(req.params.id)
         .then((post) => {
             if (post) {
-                res.status(204).json({message : `El post con id ${req.params.id} ha sido eliminado de la memoria`});
+                res.status(204);
             } else {
                 res.status(404).json({message : "El post no existe en la memoria"});
             }
