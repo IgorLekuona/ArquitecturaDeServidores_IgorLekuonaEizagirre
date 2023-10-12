@@ -1,7 +1,12 @@
 const Post = require("../models/post.model");
+const User = require("../models/user.model");
 
 module.exports.create = (req, res) => {
-    Post.create(req.body)
+    Post.create({
+        "title" : req.body.title,
+        "text" : req.body.text,
+        "author" : req.user
+    })
         .then((post) => {
             res.status(201).json(post);
         })
@@ -10,7 +15,7 @@ module.exports.create = (req, res) => {
         });
 }
 module.exports.list = (req, res) => {
-    Post.find()
+    Post.find().populate("author")
         .then((posts) => {
             res.json(posts);
         });

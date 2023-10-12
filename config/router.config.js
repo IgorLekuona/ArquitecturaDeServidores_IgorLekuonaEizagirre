@@ -6,6 +6,7 @@ const Posts = require("../controllers/posts.controller");
 
 router.post("/users", Users.create);
 router.post("/login", Users.login);
+router.get("/activate/:id", Users.activate);
 
 router.post("/posts", middleware.checkAuth, Posts.create);
 router.get("/posts", middleware.checkAuth, Posts.list);
